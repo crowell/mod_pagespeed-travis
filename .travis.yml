@@ -1,3 +1,4 @@
 language: c++
 install: ./install.sh
 script: ./run_tests.sh
+sudo: required

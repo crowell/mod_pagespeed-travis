@@ -5,6 +5,7 @@ mkdir -p ~/bin
 cd ~/bin
 svn co http://src.chromium.org/svn/trunk/tools/depot_tools 2>&1 > dev/null
 mkdir ~/modpagespeed
+cd ~/modpagespeed
 ~/bin/depot_tools/gclient config https://github.com/pagespeed/mod_pagespeed.git --unmanaged --name=src
 git clone https://github.com/pagespeed/mod_pagespeed.git src
 ~/bin/depot_tools/gclient sync --force

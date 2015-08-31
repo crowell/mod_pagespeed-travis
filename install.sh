@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt-get update
 sudo apt-get install apache2 g++ python subversion gperf make devscripts fakeroot git curl
 mkdir -p ~/bin
 cd ~/bin

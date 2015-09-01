@@ -11,3 +11,6 @@ git clone https://github.com/pagespeed/mod_pagespeed.git src
 ~/bin/depot_tools/gclient sync --force
 cd src
 make AR.host=`pwd`/build/wrappers/ar.sh AR.target=`pwd`/build/wrappers/ar.sh BUILDTYPE=Release
+python build/gyp_chromium -Dchannel=beta
+make BUILDTYPE=Release AR.host=`pwd`/build/wrappers/ar.sh AR.target=`pwd`/build/wrappers/ar.sh linux_package_deb
+sudo dpkg -i out/Release/mod-pagespeed*.deb
